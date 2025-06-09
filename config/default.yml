@@ -1,0 +1,42 @@
+executors:
+  arxiv:
+    enabled: true
+    config:
+      categories: ["cs.AI", "cs.LG", "cs.CL"]
+      max_papers: 20
+      days_back: 7
+
+  chatgpt:
+    enabled: false
+    config:
+      api_key: ${OPENAI_API_KEY}
+      queries: ["AI技術動向 2025", "機械学習最新研究"]
+      model: "gpt-4o"
+      max_tokens: 2000
+
+  genspark:
+    enabled: false
+    config:
+      api_key: ${GENSPARK_API_KEY}
+      keywords: ["AI news", "tech trends"]
+      max_results: 10
+
+  twitter:
+    enabled: false
+    config:
+      accounts: ["@openai", "@huggingface"]
+      keywords: ["AI", "machine learning"]
+      max_tweets: 50
+
+  reddit:
+    enabled: false
+    config:
+      subreddits: ["MachineLearning", "artificial"]
+      post_limit: 20
+      time_filter: "day"
+
+execution:
+  parallel: true
+  output_dir: "./outputs"
+  timeout: 300
+  retries: 3

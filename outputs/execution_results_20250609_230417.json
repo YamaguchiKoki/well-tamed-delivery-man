@@ -1,0 +1,95 @@
+{
+  "execution_time": "20250609_230417",
+  "total_executors": 1,
+  "successful": 1,
+  "failed": 0,
+  "total_items": 3,
+  "results": [
+    {
+      "executor_name": "arxiv_fetcher",
+      "success": true,
+      "data": {
+        "papers": [
+          {
+            "title": "Advanced cs.AI Research Paper 0",
+            "authors": [
+              "Author 0",
+              "Co-Author 0"
+            ],
+            "abstract": "This paper presents novel research in cs.AI...",
+            "url": "https://arxiv.org/abs/2024.0000",
+            "pdf_url": "https://arxiv.org/pdf/2024.0000.pdf",
+            "category": "cs.AI",
+            "published": "2025-06-09T23:04:17.222240",
+            "arxiv_id": "2024.0000"
+          },
+          {
+            "title": "Advanced cs.LG Research Paper 1",
+            "authors": [
+              "Author 1",
+              "Co-Author 1"
+            ],
+            "abstract": "This paper presents novel research in cs.LG...",
+            "url": "https://arxiv.org/abs/2024.0001",
+            "pdf_url": "https://arxiv.org/pdf/2024.0001.pdf",
+            "category": "cs.LG",
+            "published": "2025-06-08T23:04:17.222296",
+            "arxiv_id": "2024.0001"
+          },
+          {
+            "title": "Advanced cs.CL Research Paper 2",
+            "authors": [
+              "Author 2",
+              "Co-Author 2"
+            ],
+            "abstract": "This paper presents novel research in cs.CL...",
+            "url": "https://arxiv.org/abs/2024.0002",
+            "pdf_url": "https://arxiv.org/pdf/2024.0002.pdf",
+            "category": "cs.CL",
+            "published": "2025-06-07T23:04:17.222317",
+            "arxiv_id": "2024.0002"
+          },
+          {
+            "title": "Advanced cs.AI Research Paper 3",
+            "authors": [
+              "Author 3",
+              "Co-Author 3"
+            ],
+            "abstract": "This paper presents novel research in cs.AI...",
+            "url": "https://arxiv.org/abs/2024.0003",
+            "pdf_url": "https://arxiv.org/pdf/2024.0003.pdf",
+            "category": "cs.AI",
+            "published": "2025-06-06T23:04:17.222331",
+            "arxiv_id": "2024.0003"
+          },
+          {
+            "title": "Advanced cs.LG Research Paper 4",
+            "authors": [
+              "Author 4",
+              "Co-Author 4"
+            ],
+            "abstract": "This paper presents novel research in cs.LG...",
+            "url": "https://arxiv.org/abs/2024.0004",
+            "pdf_url": "https://arxiv.org/pdf/2024.0004.pdf",
+            "category": "cs.LG",
+            "published": "2025-06-05T23:04:17.222345",
+            "arxiv_id": "2024.0004"
+          }
+        ],
+        "count": 5,
+        "categories": [
+          "cs.AI",
+          "cs.LG",
+          "cs.CL"
+        ]
+      },
+      "start_time": "2025-06-09T23:04:16.219889",
+      "end_time": "2025-06-09T23:04:17.222361",
+      "execution_time": 1.002472,
+      "error": null,
+      "metadata": {
+        "output_count": 3
+      }
+    }
+  ]
+}
