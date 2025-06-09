@@ -5,6 +5,7 @@ executors:
       categories: ["cs.AI", "cs.LG", "cs.CL"]
       max_papers: 20
       days_back: 7
+      use_mock: true
 
   chatgpt:
     enabled: false
@@ -15,21 +16,21 @@ executors:
       max_tokens: 2000
 
   genspark:
-    enabled: false
+    enabled: true
     config:
       api_key: ${GENSPARK_API_KEY}
       keywords: ["AI news", "tech trends"]
       max_results: 10
 
   twitter:
-    enabled: false
+    enabled: true
     config:
       accounts: ["@openai", "@huggingface"]
       keywords: ["AI", "machine learning"]
       max_tweets: 50
 
   reddit:
-    enabled: false
+    enabled: true
     config:
       subreddits: ["MachineLearning", "artificial"]
       post_limit: 20
@@ -37,6 +38,8 @@ executors:
 
 execution:
   parallel: true
-  output_dir: "./outputs"
   timeout: 300
   retries: 3
+  output_dir: "./outputs"
+  log_level: "INFO"
+  save_results: true

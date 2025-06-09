@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 import traceback
 
-from .models import ExecutorFunction, Config, ExecutionResult, Pipeline, ExecutorResult
+from .models import ExecutorFunction, Config, ExecutionResult, Pipeline, ExecutorResult, WorkflowConfig, ExecutorConfig, ExecutionConfig
 
 logger = logging.getLogger(__name__)
 
@@ -42,13 +42,6 @@ def create_result(
 def validate_config(config: Config, required_keys: List[str]) -> bool:
     """設定の検証"""
     return all(key in config for key in required_keys)
-
-def filter_enabled_configs(configs: Dict[str, Dict]) -> Dict[str, Dict]:
-    """有効な設定のみフィルタ"""
-    return {
-        name: config for name, config in configs.items()
-        if config.get("enabled", True)
-    }
 
 def extract_output_count(data: Any) -> int:
     """出力件数の計算"""
@@ -154,20 +147,23 @@ async def run_executors(
 
 # ==================== パイプライン ====================
 
-def compose_pipeline(executor_configs: Dict[str, Dict], executor_registry: Dict[str, ExecutorFunction]) -> Pipeline:
+def compose_pipeline(executor_configs: Dict[str, ExecutorConfig], executor_registry: Dict[str, ExecutorFunction]) -> Pipeline:
     """設定からパイプラインを構築"""
-
-    enabled_configs = filter_enabled_configs(executor_configs)
 
     executors = []
     configs = []
     names = []
 
-    for name, config_data in enabled_configs.items():
+    for name, executor_config in executor_configs.items():
+        if not executor_config.enabled:
+            logger.info(f"Skipping disabled executor: {name}")
+            continue
+
         if name in executor_registry:
             executors.append(executor_registry[name])
-            configs.append(config_data.get("config", {}))
+            configs.append(executor_config.config)
             names.append(name)
+            logger.info(f"Added executor: {name}")
         else:
             logger.warning(f"Unknown executor: {name}")
 
@@ -175,6 +171,16 @@ def compose_pipeline(executor_configs: Dict[str, Dict], executor_registry: Dict[
 
 
 # ==================== I/O ====================
+
+def _convert_datetime_to_str(obj: Any) -> Any:
+    """再帰的にdatetimeオブジェクトを文字列に変換"""
+    if isinstance(obj, datetime):
+        return obj.isoformat()
+    elif isinstance(obj, dict):
+        return {k: _convert_datetime_to_str(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [_convert_datetime_to_str(item) for item in obj]
+    return obj
 
 async def save_execution_results(results: List[ExecutionResult], output_dir: Path):
     """実行結果の保存"""
@@ -184,19 +190,21 @@ async def save_execution_results(results: List[ExecutionResult], output_dir: Pat
     results_file = output_dir / f"execution_results_{timestamp}.json"
 
     # 結果をシリアライズ可能な形式に変換
-    serializable_results = [
-        {
+    serializable_results = []
+    for r in results:
+        result_dict = {
             "executor_name": r.executor_name,
             "success": r.success,
             "data": r.data,
-            "start_time": r.start_time.isoformat(),
-            "end_time": r.end_time.isoformat(),
+            "start_time": r.start_time.isoformat() if r.start_time else None,
+            "end_time": r.end_time.isoformat() if r.end_time else None,
             "execution_time": r.execution_time,
             "error": r.error,
             "metadata": r.metadata
         }
-        for r in results
-    ]
+        # データ内のdatetimeオブジェクトも変換
+        result_dict = _convert_datetime_to_str(result_dict)
+        serializable_results.append(result_dict)
 
     summary = {
         "execution_time": timestamp,
@@ -212,10 +220,45 @@ async def save_execution_results(results: List[ExecutionResult], output_dir: Pat
 
     logger.info(f"Results saved to: {results_file}")
 
-def load_config(config_path: Path) -> Dict[str, Any]:
-    """YAML設定ファイルの読み込み"""
+def load_config(config_path: Path) -> WorkflowConfig:
+    """YAML設定ファイルの読み込みとバリデーション"""
     import yaml
-    print(config_path)
+    import os
+
+    logger.info(f"Loading config from: {config_path}")
 
     with open(config_path, 'r', encoding='utf-8') as f:
-        return yaml.safe_load(f)
+        raw_config = yaml.safe_load(f)
+
+    # 環境変数展開
+    def expand_env_vars(data: Any) -> Any:
+        if isinstance(data, dict):
+            return {k: expand_env_vars(v) for k, v in data.items()}
+        elif isinstance(data, list):
+            return [expand_env_vars(item) for item in data]
+        elif isinstance(data, str) and data.startswith('${') and data.endswith('}'):
+            env_var = data[2:-1]
+            return os.getenv(env_var, data)
+        return data
+
+    expanded_config = expand_env_vars(raw_config)
+
+    try:
+        # Executorの設定を個別に変換
+        executor_configs = {}
+        for name, exec_data in expanded_config.get('executors', {}).items():
+            executor_configs[name] = ExecutorConfig(**exec_data)
+
+        # Execution設定を変換
+        execution_config = ExecutionConfig(**expanded_config.get('execution', {}))
+
+        # WorkflowConfigを作成
+        return WorkflowConfig(
+            executors=executor_configs,
+            execution=execution_config
+        )
+
+    except Exception as e:
+        logger.error(f"Configuration validation failed: {e}")
+        logger.error(f"Config structure: {list(expanded_config.keys())}")
+        raise ValueError(f"Invalid configuration: {e}") from e

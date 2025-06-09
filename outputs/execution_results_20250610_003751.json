@@ -1,0 +1,485 @@
+{
+  "execution_time": "20250610_003751",
+  "total_executors": 4,
+  "successful": 4,
+  "failed": 0,
+  "total_items": 20,
+  "results": [
+    {
+      "executor_name": "arxiv_fetcher",
+      "success": true,
+      "data": {
+        "unified_items": [
+          {
+            "id": "arxiv_2024_0000",
+            "title": "Advanced cs.AI Research Paper 0",
+            "summary": "This paper presents novel research in cs.AI. We propose innovative methods for solving complex problems in this domain using state-of-the-art techniques.",
+            "url": "https://arxiv.org/abs/2024.0000",
+            "source": "arxiv",
+            "source_type": "academic",
+            "published_at": "2025-06-10T00:37:51.044832",
+            "collected_at": "2025-06-10T00:37:50.043551"
+          },
+          {
+            "id": "arxiv_2024_0001",
+            "title": "Advanced cs.LG Research Paper 1",
+            "summary": "This paper presents novel research in cs.LG. We propose innovative methods for solving complex problems in this domain using state-of-the-art techniques.",
+            "url": "https://arxiv.org/abs/2024.0001",
+            "source": "arxiv",
+            "source_type": "academic",
+            "published_at": "2025-06-09T00:37:51.044881",
+            "collected_at": "2025-06-10T00:37:50.043551"
+          },
+          {
+            "id": "arxiv_2024_0002",
+            "title": "Advanced cs.CL Research Paper 2",
+            "summary": "This paper presents novel research in cs.CL. We propose innovative methods for solving complex problems in this domain using state-of-the-art techniques.",
+            "url": "https://arxiv.org/abs/2024.0002",
+            "source": "arxiv",
+            "source_type": "academic",
+            "published_at": "2025-06-08T00:37:51.044894",
+            "collected_at": "2025-06-10T00:37:50.043551"
+          },
+          {
+            "id": "arxiv_2024_0003",
+            "title": "Advanced cs.AI Research Paper 3",
+            "summary": "This paper presents novel research in cs.AI. We propose innovative methods for solving complex problems in this domain using state-of-the-art techniques.",
+            "url": "https://arxiv.org/abs/2024.0003",
+            "source": "arxiv",
+            "source_type": "academic",
+            "published_at": "2025-06-07T00:37:51.044903",
+            "collected_at": "2025-06-10T00:37:50.043551"
+          },
+          {
+            "id": "arxiv_2024_0004",
+            "title": "Advanced cs.LG Research Paper 4",
+            "summary": "This paper presents novel research in cs.LG. We propose innovative methods for solving complex problems in this domain using state-of-the-art techniques.",
+            "url": "https://arxiv.org/abs/2024.0004",
+            "source": "arxiv",
+            "source_type": "academic",
+            "published_at": "2025-06-06T00:37:51.044911",
+            "collected_at": "2025-06-10T00:37:50.043551"
+          }
+        ],
+        "count": 5,
+        "source": "arxiv",
+        "source_type": "academic",
+        "collected_at": "2025-06-10T00:37:50.043551"
+      },
+      "start_time": "2025-06-10T00:37:50.043191",
+      "end_time": "2025-06-10T00:37:51.045103",
+      "execution_time": 1.001912,
+      "error": null,
+      "metadata": {
+        "output_count": 5
+      }
+    },
+    {
+      "executor_name": "genspark_fetcher",
+      "success": true,
+      "data": {
+        "unified_items": [
+          {
+            "id": "genspark_2999983c",
+            "title": "Tech News: AI news",
+            "summary": "最新のAI業界ニュースとして、OpenAIの新しいモデル発表、GoogleのAI倫理ガイドライン更新、MicrosoftのAI統合サービス拡張などが注目されています。特に、企業向けAIサービスの実用性向上と安全性確保が重要なテーマになっています。",
+            "url": "https://techcrunch.com/ai-latest-developments",
+            "source": "genspark",
+            "source_type": "news",
+            "published_at": "2025-06-09T22:37:51.545140",
+            "collected_at": "2025-06-10T00:37:50.043872"
+          },
+          {
+            "id": "genspark_85925723",
+            "title": "Tech News: tech trends",
+            "summary": "2025年の技術トレンドとして、量子コンピューティングの実用化、5G/6G通信技術の普及、サステナブルテクノロジーの発展が挙げられています。特に、エネルギー効率とセキュリティを重視した技術開発が活発化しています。",
+            "url": "https://wired.com/tech-trends-2025",
+            "source": "genspark",
+            "source_type": "news",
+            "published_at": "2025-06-09T20:37:51.545197",
+            "collected_at": "2025-06-10T00:37:50.043872"
+          }
+        ],
+        "count": 2,
+        "source": "genspark",
+        "source_type": "news",
+        "collected_at": "2025-06-10T00:37:50.043872"
+      },
+      "start_time": "2025-06-10T00:37:50.043562",
+      "end_time": "2025-06-10T00:37:51.545517",
+      "execution_time": 1.501955,
+      "error": null,
+      "metadata": {
+        "output_count": 5
+      }
+    },
+    {
+      "executor_name": "twitter_fetcher",
+      "success": true,
+      "data": {
+        "unified_items": [
+          {
+            "id": "twitter_6a750ddd",
+            "title": "Tweet by @openai",
+            "summary": "Excited to announce our new AI research breakthrough in multimodal understanding! 🚀 #AI #MachineLearning",
+            "url": "https://twitter.com/openai/status/sample1",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T23:37:50.545452",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_6e5e93b2",
+            "title": "Tweet by @openai",
+            "summary": "The future of AI is multimodal. Combining vision, language, and reasoning capabilities will unlock new possibilities.",
+            "url": "https://twitter.com/openai/status/sample3",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T16:37:50.545520",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_3ce935f2",
+            "title": "Tweet by @huggingface",
+            "summary": "Open source AI models are democratizing access to cutting-edge technology. What are you building with them?",
+            "url": "https://twitter.com/huggingface/status/sample4",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T12:37:50.545529",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_aaf7a4f0",
+            "title": "Tweet by @openai",
+            "summary": "Sample tweet about AI from @openai. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@openai/status/gen0",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T23:37:50.545690",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_8ef7dc4d",
+            "title": "Tweet by @huggingface",
+            "summary": "Sample tweet about machine learning from @huggingface. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@huggingface/status/gen1",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T22:37:50.545711",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_aaf7a4f0",
+            "title": "Tweet by @openai",
+            "summary": "Sample tweet about AI from @openai. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@openai/status/gen2",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T21:37:50.545724",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_8ef7dc4d",
+            "title": "Tweet by @huggingface",
+            "summary": "Sample tweet about machine learning from @huggingface. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@huggingface/status/gen3",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T20:37:50.545734",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_aaf7a4f0",
+            "title": "Tweet by @openai",
+            "summary": "Sample tweet about AI from @openai. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@openai/status/gen4",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T19:37:50.545743",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_8ef7dc4d",
+            "title": "Tweet by @huggingface",
+            "summary": "Sample tweet about machine learning from @huggingface. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@huggingface/status/gen5",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T18:37:50.545752",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_aaf7a4f0",
+            "title": "Tweet by @openai",
+            "summary": "Sample tweet about AI from @openai. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@openai/status/gen6",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T17:37:50.545761",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_8ef7dc4d",
+            "title": "Tweet by @huggingface",
+            "summary": "Sample tweet about machine learning from @huggingface. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@huggingface/status/gen7",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T16:37:50.545769",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_aaf7a4f0",
+            "title": "Tweet by @openai",
+            "summary": "Sample tweet about AI from @openai. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@openai/status/gen8",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T15:37:50.545777",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          },
+          {
+            "id": "twitter_8ef7dc4d",
+            "title": "Tweet by @huggingface",
+            "summary": "Sample tweet about machine learning from @huggingface. This is auto-generated content for testing purposes.",
+            "url": "https://twitter.com@huggingface/status/gen9",
+            "source": "twitter",
+            "source_type": "social",
+            "published_at": "2025-06-09T14:37:50.545785",
+            "collected_at": "2025-06-10T00:37:50.044163"
+          }
+        ],
+        "count": 13,
+        "source": "twitter",
+        "source_type": "social",
+        "collected_at": "2025-06-10T00:37:50.044163"
+      },
+      "start_time": "2025-06-10T00:37:50.043880",
+      "end_time": "2025-06-10T00:37:50.546278",
+      "execution_time": 0.502398,
+      "error": null,
+      "metadata": {
+        "output_count": 5
+      }
+    },
+    {
+      "executor_name": "reddit_fetcher",
+      "success": true,
+      "data": {
+        "unified_items": [
+          {
+            "id": "reddit_MachineLearning_9d05eeab",
+            "title": "What's the best machine learning framework for beginners in 2025?",
+            "summary": "I'm new to ML and wondering which framework to start with. PyTorch vs TensorFlow vs JAX?",
+            "url": "https://reddit.com/r/MachineLearning/comments/sample1",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T22:37:51.045174",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_MachineLearning_52cdf753",
+            "title": "New breakthrough in transformer architecture efficiency",
+            "summary": "Researchers have developed a new attention mechanism that reduces computational complexity by 40%.",
+            "url": "https://reddit.com/r/MachineLearning/comments/sample2",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T18:37:51.045187",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_3c803fd7",
+            "title": "Discussion: AI Safety in production environments",
+            "summary": "How do you ensure AI systems behave safely when deployed at scale?",
+            "url": "https://reddit.com/r/artificial/comments/sample3",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T12:37:51.045192",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_e23cbb74",
+            "title": "Open source LLM comparison: Llama vs Mixtral vs others",
+            "summary": "Detailed comparison of open source language models released in 2024-2025.",
+            "url": "https://reddit.com/r/artificial/comments/sample4",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T06:37:51.045197",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_MachineLearning_e1e9523d",
+            "title": "Interesting discussion about AI topic #1",
+            "summary": "This is a generated post about current trends in MachineLearning.",
+            "url": "https://reddit.com/r/MachineLearning/comments/gen0",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T23:37:51.045215",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_e97f0fe9",
+            "title": "Interesting discussion about AI topic #2",
+            "summary": "This is a generated post about current trends in artificial.",
+            "url": "https://reddit.com/r/artificial/comments/gen1",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T22:37:51.045222",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_MachineLearning_1f280e34",
+            "title": "Interesting discussion about AI topic #3",
+            "summary": "This is a generated post about current trends in MachineLearning.",
+            "url": "https://reddit.com/r/MachineLearning/comments/gen2",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T21:37:51.045228",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_d925c620",
+            "title": "Interesting discussion about AI topic #4",
+            "summary": "This is a generated post about current trends in artificial.",
+            "url": "https://reddit.com/r/artificial/comments/gen3",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T20:37:51.045234",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_MachineLearning_d1ab1ed0",
+            "title": "Interesting discussion about AI topic #5",
+            "summary": "This is a generated post about current trends in MachineLearning.",
+            "url": "https://reddit.com/r/MachineLearning/comments/gen4",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T19:37:51.045238",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_bf26750d",
+            "title": "Interesting discussion about AI topic #6",
+            "summary": "This is a generated post about current trends in artificial.",
+            "url": "https://reddit.com/r/artificial/comments/gen5",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T18:37:51.045244",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_MachineLearning_f6c2a5ab",
+            "title": "Interesting discussion about AI topic #7",
+            "summary": "This is a generated post about current trends in MachineLearning.",
+            "url": "https://reddit.com/r/MachineLearning/comments/gen6",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T17:37:51.045249",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_b7abeccf",
+            "title": "Interesting discussion about AI topic #8",
+            "summary": "This is a generated post about current trends in artificial.",
+            "url": "https://reddit.com/r/artificial/comments/gen7",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T16:37:51.045254",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_MachineLearning_d7c0af5a",
+            "title": "Interesting discussion about AI topic #9",
+            "summary": "This is a generated post about current trends in MachineLearning.",
+            "url": "https://reddit.com/r/MachineLearning/comments/gen8",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T15:37:51.045259",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_5d4bc656",
+            "title": "Interesting discussion about AI topic #10",
+            "summary": "This is a generated post about current trends in artificial.",
+            "url": "https://reddit.com/r/artificial/comments/gen9",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T14:37:51.045264",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_MachineLearning_d65eaada",
+            "title": "Interesting discussion about AI topic #11",
+            "summary": "This is a generated post about current trends in MachineLearning.",
+            "url": "https://reddit.com/r/MachineLearning/comments/gen10",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T13:37:51.045269",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_a6b84f36",
+            "title": "Interesting discussion about AI topic #12",
+            "summary": "This is a generated post about current trends in artificial.",
+            "url": "https://reddit.com/r/artificial/comments/gen11",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T12:37:51.045273",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_MachineLearning_e490a8b2",
+            "title": "Interesting discussion about AI topic #13",
+            "summary": "This is a generated post about current trends in MachineLearning.",
+            "url": "https://reddit.com/r/MachineLearning/comments/gen12",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T11:37:51.045278",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_ac66b623",
+            "title": "Interesting discussion about AI topic #14",
+            "summary": "This is a generated post about current trends in artificial.",
+            "url": "https://reddit.com/r/artificial/comments/gen13",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T10:37:51.045284",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_MachineLearning_5a63e657",
+            "title": "Interesting discussion about AI topic #15",
+            "summary": "This is a generated post about current trends in MachineLearning.",
+            "url": "https://reddit.com/r/MachineLearning/comments/gen14",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T09:37:51.045289",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          },
+          {
+            "id": "reddit_artificial_5d399107",
+            "title": "Interesting discussion about AI topic #16",
+            "summary": "This is a generated post about current trends in artificial.",
+            "url": "https://reddit.com/r/artificial/comments/gen15",
+            "source": "reddit",
+            "source_type": "social",
+            "published_at": "2025-06-09T08:37:51.045293",
+            "collected_at": "2025-06-10T00:37:50.044462"
+          }
+        ],
+        "count": 20,
+        "source": "reddit",
+        "source_type": "social",
+        "collected_at": "2025-06-10T00:37:50.044462"
+      },
+      "start_time": "2025-06-10T00:37:50.044169",
+      "end_time": "2025-06-10T00:37:51.045622",
+      "execution_time": 1.001453,
+      "error": null,
+      "metadata": {
+        "output_count": 5
+      }
+    }
+  ]
+}
