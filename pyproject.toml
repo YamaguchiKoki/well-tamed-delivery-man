@@ -9,6 +9,8 @@ dependencies = [
     "rich",
     "pyyaml",
     "aiohttp",
+    "requests>=2.32.4",
+    "python-dotenv>=1.0.1",
 ]
 
 [project.optional-dependencies]
