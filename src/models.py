@@ -16,19 +16,6 @@ class SourceType(str, Enum):
     LLM = "llm"
     FORUM = "forum"
 
-class UnifiedContent(BaseModel):
-    """統一されたコンテンツ形式（詳細版）"""
-    id: str
-    title: str
-    content: str
-    source: str
-    source_type: SourceType
-    url: str
-    created_at: datetime
-    metadata: Dict[str, Any] = Field(default_factory=dict)
-    tags: List[str] = Field(default_factory=list)
-    importance_score: Optional[float] = None
-
 # Level 1: 統一出力フォーマット
 class UnifiedItem(BaseModel):
     """統一されたアイテム形式（Level 1）"""
